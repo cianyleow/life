@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>The Answer</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css">
+			* {
+				box-sizing: border-box;
+				font-family: "Google Sans",Roboto,Arial,Helvetica,sans-serif;
+			}
+
+			html, body {
+				padding: 40px;
+				margin: 0;
+			}
+
+			.subtitle {
+				width: 100%;
+				font-style: italics;
+				text-align: center;
+				margin-top: 10px;
+				font-size: 10px;
+			}
+
+			#question {
+				background: #1a73e8;
+				border: none;
+				color: #fff;
+				width: 100%;
+				height: 40px;
+				box-sizing: border-box;
+			}
+
+			#question:hover {
+				background: #174ea6;
+				cursor: pointer;
+			}
+	
+			#answer {
+				width: 100%;
+				margin-top: 40px;	
+				line-height: 40px;
+				font-size: 40px;
+				text-align: center;
+			}
+				
+			
+		</style>
+	</head>
+	<body>
+		<button id="question">What is the answer to life, the universe and everything?</button>
+		<div class="subtitle">Click up there ^</div>
+		<div id="answer"></div>
+
+		<script>
+			const questionEl = document.getElementById('question');
+			const answerEl = document.getElementById('answer');
+			questionEl.addEventListener('click', function(evt) {
+				answerEl.textContent = '42';
+			});
+		</script>
+	</body>
+</html>
